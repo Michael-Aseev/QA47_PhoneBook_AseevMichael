@@ -7,7 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.BaseAPI;
 
-import static utils.RandomUtils.*;
+import static utils.RandomUtils.generateEmail;
+import static utils.RandomUtils.generateString;
 
 public class RegistrationTestsRest extends AuthenticationController implements BaseAPI {
 

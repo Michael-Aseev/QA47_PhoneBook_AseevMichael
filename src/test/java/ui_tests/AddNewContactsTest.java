@@ -15,9 +15,9 @@ import pages.LoginPage;
 import utils.HeaderMenuItem;
 import utils.TestNGListener;
 
-import static pages.BasePage.*;
+import static pages.BasePage.clickButtonHeader;
+import static utils.PropertiesReader.getProperty;
 import static utils.RandomUtils.*;
-import static utils.PropertiesReader.*;
 
 @Listeners(TestNGListener.class)
 

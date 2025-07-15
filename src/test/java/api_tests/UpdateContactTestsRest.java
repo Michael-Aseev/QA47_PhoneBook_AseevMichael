@@ -8,9 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import static utils.RandomUtils.*;
-import static utils.RandomUtils.generateString;
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
+import static utils.RandomUtils.*;
 
 
 public class UpdateContactTestsRest extends ContactController {

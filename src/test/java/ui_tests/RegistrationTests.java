@@ -8,10 +8,9 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.LoginPage;
-import utils.RetryAnalyzer;
 import utils.TestNGListener;
 
-import static utils.RandomUtils.*;
+import static utils.RandomUtils.generateEmail;
 @Listeners(TestNGListener.class)
 
 public class RegistrationTests extends ApplicationManager {

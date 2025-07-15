@@ -2,8 +2,6 @@ package ui_tests;
 
 import dto.User;
 import manager.ApplicationManager;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;

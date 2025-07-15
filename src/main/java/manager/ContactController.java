@@ -5,12 +5,11 @@ import dto.TokenDto;
 import dto.User;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import utils.BaseAPI;
 
-import static utils.PropertiesReader.getProperty;
 import static io.restassured.RestAssured.given;
+import static utils.PropertiesReader.getProperty;
 
 
 public class ContactController implements BaseAPI {

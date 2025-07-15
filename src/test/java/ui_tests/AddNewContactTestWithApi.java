@@ -15,7 +15,6 @@ import utils.HeaderMenuItem;
 import static pages.BasePage.clickButtonHeader;
 import static utils.PropertiesReader.getProperty;
 import static utils.RandomUtils.*;
-import static utils.RandomUtils.generateString;
 
 public class AddNewContactTestWithApi extends ApplicationManager {
     HomePage homePage;

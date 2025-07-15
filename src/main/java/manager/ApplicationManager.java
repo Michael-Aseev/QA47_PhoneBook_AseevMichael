@@ -11,7 +11,6 @@ import org.testng.annotations.BeforeMethod;
 import utils.WDListener;
 
 import java.time.Duration;
-import java.time.LocalDate;
 
 public class ApplicationManager {
     private WebDriver driver;

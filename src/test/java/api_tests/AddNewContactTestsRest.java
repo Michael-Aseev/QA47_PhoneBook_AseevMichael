@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import static utils.RandomUtils.*;
-import static utils.RandomUtils.generateString;
 
 public class AddNewContactTestsRest extends ContactController {
     SoftAssert softAssert = new SoftAssert();
