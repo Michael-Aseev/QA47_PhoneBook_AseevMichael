@@ -1,4 +1,4 @@
-~/IdeaProjects/QA_47_Auto_Projects/QA47_PhoneBook_AseevMichael      //from console
+~/IdeaProjects/QA_47_Auto_Projects/QA47_PhoneBook_AseevMichael      //from console !!!
 ./gradlew clean smoke_tests
 ./gradlew clean smoke_tests_api
 ./gradlew clean login_tests_browser
