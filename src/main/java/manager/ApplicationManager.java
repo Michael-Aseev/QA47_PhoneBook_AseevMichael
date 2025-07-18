@@ -3,6 +3,7 @@ package manager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.Browser;
@@ -35,6 +36,39 @@ public class ApplicationManager {
 
 
     @BeforeMethod(alwaysRun = true)
+public void setup() {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--headless");
+    switch (browser.toLowerCase()) {
+        case "firefox":
+            driver = new FirefoxDriver();
+            logger.info("Start test in browser Firefox");
+            break;
+        case "edge":
+            System.setProperty("webdriver.edge.driver", System.getProperty("user.home") + "/tools/msedgedriver/msedgedriver");
+            driver = new EdgeDriver();
+            logger.info("Start test in browser Edge");
+            break;
+        case "chrome":
+            driver = new ChromeDriver(chromeOptions);
+            logger.info("Start test in browser Chrome");
+            break;
+        default:
+            driver = new ChromeDriver(chromeOptions);
+            logger.info("Start test in browser Chrome");
+            break;
+    }
+
+    driver.manage().window().maximize();
+    driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+    WebDriverListener webDriverListener = new WDListener();
+    driver = new EventFiringDecorator<>(webDriverListener).decorate(driver);
+}
+
+
+
+
+   /* @BeforeMethod(alwaysRun = true)
     public void setup() {
 //      logger.info("Start test --> " + LocalDate.now());
        // driver = new ChromeDriver();
@@ -62,7 +96,7 @@ public class ApplicationManager {
         driver = new EventFiringDecorator<>(webDriverListener).decorate(driver);
 
     }
-
+*/
     @AfterMethod(enabled = true, alwaysRun = true)
     public void tearDown() {
 //        logger.info("Stop teste ------------");
