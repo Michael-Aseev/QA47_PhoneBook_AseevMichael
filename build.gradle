@@ -43,6 +43,15 @@ task smoke_tests_api(type: Test){
     }
 }
 
+task login_tests_browser(type: Test) {
+    useTestNG() {
+        if (project.hasProperty('browser')) {
+            systemProperty 'browser', "${browser}"
+        }
+        suites 'src/test/resources/login_tests.xml'
+    }
+}
+
 task different_tests(type: Test) {
     useTestNG() {
         if (project.hasProperty('browser')) {
