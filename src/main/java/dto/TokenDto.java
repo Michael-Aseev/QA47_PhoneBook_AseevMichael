@@ -12,6 +12,6 @@ import lombok.*;
 public class TokenDto {
     private String token;
 
-    public class getToken() {
+    public class getToken {
     }
 }
